@@ -70,20 +70,7 @@ export const SectionInfo = styled.div`
   font-size:16px;
 `;
 
-export const ListGenres = styled.div`
-  >span{
-      font-weight: bold;
-      margin-bottom:20px;
-    }
-  >ul{
-    margin-top:10px;
-    >li{
-      margin-bottom:4px;
-    }
-  }
-`;
-
-export const ListProductionCompanies = styled.div`
+export const List = styled.div`
 
   >span{
     font-weight: bold;

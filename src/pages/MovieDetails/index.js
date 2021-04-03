@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import { useParams } from 'react-router';
-import { Container,BackButton, ContainerDetails, ContainerImg, ContainerInfo,ContainerTitle, Overview, SectionInfo, ListGenres, ListProductionCompanies } from './styles';
+import { Container,BackButton, ContainerDetails, ContainerImg, ContainerInfo,ContainerTitle, Overview, SectionInfo, List } from './styles';
 import api from '../../services/api';
 import { LoopCircleLoading } from 'react-loadingg';
 import {ImArrowLeft2} from "react-icons/im"
@@ -42,22 +42,22 @@ function MovieDetails() {
                   {data.overview}
                 </Overview>
                 <SectionInfo>
-                    <ListGenres>
+                    <List>
                       <span>Gêneros</span>
                       <ul>
                       {
                         data.genres.map(item => <li>{item.name}</li>)
                       }
                       </ul>
-                    </ListGenres>
-                    <ListProductionCompanies>
+                    </List>
+                    <List>
                       <span>Produtoras</span>
                       <ul>
                       {
                         data.production_companies.map(item => <li>{item.name}</li>)
                       }
                       </ul>
-                    </ListProductionCompanies>
+                    </List>
                 </SectionInfo>
               </ContainerInfo>
             </ContainerDetails>
